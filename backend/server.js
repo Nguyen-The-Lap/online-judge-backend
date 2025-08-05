@@ -10,6 +10,9 @@ const credentials = require("./middleware/credentials");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
 const PORT = process.env.PORT || 3500;
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger');
+
 
 // Connect to MongoDB
 connectDB();
@@ -47,6 +50,7 @@ app.use("/submissions", require("./routes/api/submissions"));
 app.use("/problemset", require("./routes/api/problems"));
 app.use("/run", require("./routes/api/run"));
 app.use("/submit", require("./routes/api/submit"));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Catch-all for unknown routes
 app.all("*", (req, res) => {
