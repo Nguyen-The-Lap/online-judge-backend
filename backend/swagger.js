@@ -1,0 +1,22 @@
+// swagger.js
+const swaggerJSDoc = require("swagger-jsdoc");
+
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Online Judge API",
+      version: "1.0.0",
+      description: "API docs",
+    },
+    servers: [
+      {
+        url: "https://online-judge-backend-8v2p.onrender.com", // replace with your actual URL
+      },
+    ],
+  },
+  apis: ["./routes/**/*.js"], // adjust this path based on your file structure
+};
+
+const swaggerSpec = swaggerJSDoc(options);
+module.exports = swaggerSpec;
