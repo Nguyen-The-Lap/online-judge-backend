@@ -1,7 +1,7 @@
 {
-  "name": "15tut",
+  "name": "Lap",
   "version": "1.0.0",
-  "description": "MongoDB tutorial",
+  "description": "final term porject",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -23,7 +23,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.3",
     "multer": "^1.4.5-lts.1",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.1.0"
   },
