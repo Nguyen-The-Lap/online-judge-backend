@@ -9,6 +9,15 @@ const options = {
       version: "1.0.0",
       description: "API docs",
     },
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT"
+        }
+      }
+    },
     servers: [
       {
         url: "https://online-judge-backend-8v2p.onrender.com", // replace with your actual URL
