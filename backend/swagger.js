@@ -20,11 +20,11 @@ const options = {
     },
     servers: [
       {
-        url: "https://online-judge-backend-8v2p.onrender.com", // replace with your actual URL
+        url: "https://online-judge-backend-8v2p.onrender.com",
       },
     ],
   },
-  apis: ["./routes/**/*.js"], // adjust this path based on your file structure
+  apis: ["./routes/**/*.js"], 
 };
 
 const swaggerSpec = swaggerJSDoc(options);
