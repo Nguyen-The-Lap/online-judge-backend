@@ -13,10 +13,6 @@ const PORT = process.env.PORT || 3500;
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./swagger');
 
-
-// Connect to MongoDB
-connectDB();
-
 // Custom middleware logger
 app.use(logger);
 
@@ -65,3 +61,6 @@ mongoose.connection.once("open", () => {
   console.log("✅ Connected to MongoDB");
   app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 });
+
+// Connect to MongoDB
+connectDB();
