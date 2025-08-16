@@ -94,14 +94,14 @@ const options = {
     },
     servers: [
       {
-        url: "https://online-judge-backend-8v2p.onrender.com",
+        url: process.env.BASE_URL,
       },
       {
         url: "http://localhost:3000",
       },
     ],
   },
-  apis: ["./routes/**/*.js"], // your route files with @openapi annotations
+  apis: ["./routes/**/*.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
